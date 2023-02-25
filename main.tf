@@ -7,7 +7,7 @@ resource "aws_instance" "test1" {
 # security_groups = [aws_security_group.TF-SG.name]
   
   tags = {
-    Name = "test-instance"
+    Name = "test1-instance"
   }
   
 }
