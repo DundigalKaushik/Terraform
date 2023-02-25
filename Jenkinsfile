@@ -10,12 +10,10 @@ pipeline {
                 git branch: 'main', credentialsId: 'Gitcredentials', url: 'https://github.com/DundigalKaushik/Terraform.git'
             }
         }
-    }
-    }
         stage ("terraform init") {
             steps {
                 sh 'terraform init'
             }
         }
-        
-   
+    }
+}
