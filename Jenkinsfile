@@ -10,4 +10,6 @@ pipeline {
                 git branch: 'main', credentialsId: 'Gitcredentials', url: 'https://github.com/DundigalKaushik/Terraform.git'
             }
         }
+    }
+}
         
