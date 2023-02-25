@@ -1,3 +1,6 @@
+provider "aws" {
+  region = "us-east-1"
+}
 resource "aws_instance" "test1" {
   count = var.ec2_count
   ami = var.ami_id
