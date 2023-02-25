@@ -1,5 +1,5 @@
 variable "ec2_count" {
-  default = "2"
+  default = "1"
 }
 
 variable "ami_id" {
