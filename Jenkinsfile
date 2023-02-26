@@ -10,7 +10,7 @@ pipeline {
                git branch: 'main', credentialsId: 'Gitcredentials', url: 'https://github.com/DundigalKaushik/Terraform.git'
             }
         }
-        stage ("terraform init") {
+        /*stage ("terraform init") {
             steps {
                 sh 'terraform init'
             }
@@ -25,5 +25,10 @@ pipeline {
                 sh 'terraform apply --auto-approve'
             }
         }
-    }
+    }*/
+        stage ("terraform destroy") {
+            steps {
+                sh 'terraform destroy --auto-approve'
+            }
+        }
 }
