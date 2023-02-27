@@ -27,7 +27,7 @@ resource "aws_subnet" "private-subnet" {
   }
 }
 
-esource "aws_internet_gateway" "igw-1" {
+resource "aws_internet_gateway" "igw-1" {
   vpc_id = aws_vpc.main-1.id
 
   tags = {
