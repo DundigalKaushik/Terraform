@@ -48,3 +48,8 @@ resource "aws_route_table" "main-rtb" {
     Name = "main-rtb"
   }
 }
+
+resource "aws_route_table_association" "main-rtb-a" {
+  subnet_id      = aws_subnet.public-subnet.id
+  route_table_id = aws_route_table.main-rtb.id
+}
