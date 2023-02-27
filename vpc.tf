@@ -34,3 +34,21 @@ resource "aws_internet_gateway" "igw-1" {
     Name = "igw"
   }
 }
+
+resource "aws_route_table" "main-rtb" {
+  vpc_id = aws_vpc.main-1.id
+
+  route {
+    cidr_block = "0.0.0.0/0"
+    gateway_id = aws_internet_gateway.igw-1.id
+  }
+
+  route {
+    ipv6_cidr_block        = "::/0"
+    egress_only_gateway_id = aws_egress_only_internet_gateway.igw-1.id
+  }
+
+  tags = {
+    Name = "main-rtb"
+  }
+}
