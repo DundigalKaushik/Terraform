@@ -26,3 +26,11 @@ resource "aws_subnet" "private-subnet" {
     Name = "private-subnet"
   }
 }
+
+esource "aws_internet_gateway" "igw-1" {
+  vpc_id = aws_vpc.main-1.id
+
+  tags = {
+    Name = "igw"
+  }
+}
